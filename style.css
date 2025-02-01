@@ -14,3 +14,39 @@ h1 {
 .output{
     text-align: center;
 }
+
+#save_n_load{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#save_n_load_box{
+    margin: 0 auto;
+}
+
+a {
+    float: left;
+    color: black;
+    background-color: #F0F0F0;
+    font-size: 95%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 15px;
+    text-decoration: none;
+}
+
+form{
+    float: left;
+    color: black;
+    background-color: #F0F0F0;
+    font-size: 95%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 15px;
+    text-decoration: none;
+}

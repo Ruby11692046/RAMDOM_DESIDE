@@ -12,13 +12,27 @@
     <h1>ランダムでやること決めてくれるサイト</h1>
     <div id="center">
         <p>以下にやりたいことを書いていってね！</p>
-        <div id="container">
-            <input type="text" class="todo">
-            <input type="button" value="追加" id="add" onclick="add_input()">
+        <div id="master_container">
+            <div id="container">
+                <input type="text" class="todo" value="">
+                <input type="button" value="追加" id="add" onclick="add_input()">
+        </div>
         </div>
         <input type="button" value="ランダムで決めてもらう" onclick="decide()">
     </div>
     <div id="output"></div>
+
+    <div id="save_n_load">
+        <div id="save_n_load_box">
+            <form name="load_html">
+                <label class="save_n_load">
+                    <input type="file" name="myfile" style="display:none" class="save_n_load">ロード
+                </label>
+            </form>
+    
+            <a id="save_html" download="次回こちらをロードしてください.txt" class="save_n_load">セーブ</a>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
