@@ -22,6 +22,12 @@ form.myfile.addEventListener("change", function (e) {
         //ファイルの中身を改行で区切る
         const result_split = reader.result.split("\n");
 
+        //コンテナを初期化する
+        for(i=0;i<(container_counter);i++){
+            let remove_container = master_container.removeChild(master_container.firstElementChild);
+        }
+        container_counter = 0;
+
         //ファイルの中身をtodo内に転送する
         for (i = 0; i < result_split.length; i++) {
             //これは2の配列をtodoに格納する処理
@@ -34,6 +40,7 @@ form.myfile.addEventListener("change", function (e) {
 })
 
 function add_input() {
+    container_counter++;
     let new_container = document.createElement('div');
     new_container.id = "container"
     master_container.appendChild(new_container);
@@ -48,7 +55,11 @@ function decide() {
 save_html.addEventListener('click', function () {
     var save_data = "";
     for (i = 0; i < todo.length; i++) {
+        if (i != (todo.length-1)) {
         save_data = save_data + todo[i].value + "\n";
+        }else{
+            save_data = save_data + todo[i].value;
+        }
     }
     const save_create = new Blob([save_data], { "type": "text/plain" });
     save_html.href = window.URL.createObjectURL(save_create);
